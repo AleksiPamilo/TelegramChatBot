@@ -8,7 +8,7 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import java.util.*;
 
 public class MyBot extends TelegramLongPollingBot {
-    private final Map<String, BotCommand> commands = new HashMap<>();
+    private static final Map<String, BotCommand> commands = new HashMap<>();
 
     public MyBot(String botToken) {
         super(botToken);
@@ -16,6 +16,10 @@ public class MyBot extends TelegramLongPollingBot {
             commands.put(cmd.getCommand(), cmd);
             System.out.println("Rekisteröitiin komento: " + cmd.getCommand());
         });
+    }
+
+    public static Map<String,BotCommand> getCommands() {
+        return commands;
     }
 
     @Override

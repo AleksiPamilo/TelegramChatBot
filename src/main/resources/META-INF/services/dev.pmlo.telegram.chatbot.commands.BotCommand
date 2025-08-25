@@ -1,2 +1,3 @@
 dev.pmlo.telegram.chatbot.commands.InfoCommand
 dev.pmlo.telegram.chatbot.commands.WeatherCommand
+dev.pmlo.telegram.chatbot.commands.MenuCommand

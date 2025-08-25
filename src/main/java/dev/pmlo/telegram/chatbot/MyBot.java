@@ -2,6 +2,7 @@ package dev.pmlo.telegram.chatbot;
 
 import dev.pmlo.telegram.chatbot.commands.BotCommand;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
+import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
 import java.util.*;
@@ -24,16 +25,23 @@ public class MyBot extends TelegramLongPollingBot {
 
     @Override
     public void onUpdateReceived(Update update) {
-        if (update.hasMessage() && update.getMessage().hasText()) {
-            String text = update.getMessage().getText();
-            BotCommand cmd = commands.get(text);
-            if (cmd != null) {
-                try {
-                    execute(cmd.handle(update.getMessage()));
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
+        if (!(update.hasMessage() && update.getMessage().hasText())) return;
+
+        String text = update.getMessage().getText().trim();
+        if (!text.startsWith("/")) return;
+
+        String[] parts = text.split("\\s+", 2);
+        String key = parts[0];
+
+        BotCommand cmd = commands.get(key);
+        if (cmd == null) return;
+
+        try {
+            SendMessage reply = cmd.handle(update.getMessage());
+            if (reply != null) execute(reply);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
+
 }

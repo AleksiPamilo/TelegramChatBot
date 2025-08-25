@@ -16,6 +16,6 @@ public class InfoCommand implements BotCommand {
 
     @Override
     public SendMessage handle(Message message) {
-        return new SendMessage(message.getChatId().toString(), "Komennot: /info");
+        return new SendMessage(message.getChatId().toString(), "Komennot: /info, /weather <kaupunki>");
     }
 }

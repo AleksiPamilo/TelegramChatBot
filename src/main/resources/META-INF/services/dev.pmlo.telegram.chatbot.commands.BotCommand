@@ -5,3 +5,4 @@ dev.pmlo.telegram.chatbot.commands.JokeCommand
 dev.pmlo.telegram.chatbot.commands.SpotifyCommand
 dev.pmlo.telegram.chatbot.commands.QuizCommand
 dev.pmlo.telegram.chatbot.commands.QuoteCommand
+dev.pmlo.telegram.chatbot.commands.FactCommand

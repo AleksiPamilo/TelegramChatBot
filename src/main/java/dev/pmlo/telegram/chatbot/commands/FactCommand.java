@@ -31,7 +31,6 @@ public class FactCommand implements BotCommand {
                     .build();
 
             HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
-            System.out.println(response.body());
             JSONObject json = new JSONObject(response.body());
             String fact = json.optString("text", "No fact found!");
 
@@ -41,7 +40,6 @@ public class FactCommand implements BotCommand {
                     .build();
 
         } catch (Exception e) {
-            System.out.println(e.getMessage());
             return SendMessage.builder()
                     .chatId(message.getChatId().toString())
                     .text("Virhe faktan hakemisessa.")

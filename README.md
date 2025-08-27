@@ -46,7 +46,7 @@ After this, you can simply run:
 - **/spotify** - Näyttää tällä hetkellä kuunnellun kappaleen Spotifysta
 - **/quote** - Palauttaa satunnaisen motivaatiolauseen
 - **/quiz** - Palauttaa satunnaisen trivia-kysymyksen ja vastausvaihtoehdot, oikea vastaus spoilerina
-
+- **/movie** - Palauttaa satunnaisen elokuvan
 ### Notes
 1. API keys are loaded from the .env file using dotenv-java (https://github.com/cdimascio/dotenv-java)
 2. Make sure the .env file is located in the project root so the bot can access the keys correctly.

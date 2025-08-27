@@ -12,4 +12,8 @@ public class Config {
     public static String getWeatherApiKey() {
         return dotenv.get("WEATHER_API_KEY");
     }
+
+    public static String getRapidApiKey() {
+        return dotenv.get("RAPID_API_KEY");
+    }
 }

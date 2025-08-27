@@ -38,8 +38,8 @@ After this, you can simply run:
 
 ## Commands
 - **/dice** - Heittää nopan (1-6)
-- **/coin** - Heittää kolikon (Heads/Tails)
-- **/weather** <city> - Hakee sään annetusta kaupungista, esim. /weather Helsinki
+- **/coin** - Heittää kolikon (Kruuna/Klaava)
+- **/weather** <kaupunki> - Hakee sään annetusta kaupungista, esim. /weather Helsinki
 - **/joke** - Kertoo hauskan vitsin
 - **/menu** - Näyttää tämän päivän lounaslistan
 - **/fact** - Palauttaa satunnaisen faktan

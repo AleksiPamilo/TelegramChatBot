@@ -14,7 +14,7 @@ public class JokeCommand implements BotCommand {
 
     @Override
     public String getCommand() {
-        return "/joke";
+        return "joke";
     }
 
     @Override

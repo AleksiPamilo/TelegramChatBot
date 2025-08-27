@@ -14,7 +14,7 @@ import java.time.LocalDate;
 public class MenuCommand implements BotCommand {
     @Override
     public String getCommand() {
-        return "/menu";
+        return "menu";
     }
 
     @Override

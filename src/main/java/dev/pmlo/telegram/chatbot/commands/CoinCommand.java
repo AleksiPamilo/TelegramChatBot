@@ -10,7 +10,7 @@ public class CoinCommand implements BotCommand {
 
     @Override
     public String getCommand() {
-        return "/coin";
+        return "coin";
     }
 
     @Override

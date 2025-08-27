@@ -15,7 +15,7 @@ public class SpotifyCommand implements BotCommand {
 
     @Override
     public String getCommand() {
-        return "/spotify";
+        return "spotify";
     }
 
     @Override

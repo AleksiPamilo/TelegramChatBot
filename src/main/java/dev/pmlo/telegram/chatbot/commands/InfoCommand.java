@@ -8,7 +8,7 @@ public class InfoCommand implements BotCommand {
 
     @Override
     public String getCommand() {
-        return "/info";
+        return "info";
     }
 
     @Override

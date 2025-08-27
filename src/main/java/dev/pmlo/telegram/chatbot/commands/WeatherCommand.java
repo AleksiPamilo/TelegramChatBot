@@ -17,7 +17,7 @@ public class WeatherCommand implements BotCommand {
 
     @Override
     public String getCommand() {
-        return "/weather";
+        return "weather";
     }
 
     @Override

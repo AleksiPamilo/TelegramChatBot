@@ -15,7 +15,7 @@ public class QuoteCommand implements BotCommand {
 
     @Override
     public String getCommand() {
-        return "/quote";
+        return "quote";
     }
 
     @Override

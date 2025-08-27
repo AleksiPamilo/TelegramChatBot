@@ -19,7 +19,7 @@ public class QuizCommand implements BotCommand {
 
     @Override
     public String getCommand() {
-        return "/quiz";
+        return "quiz";
     }
 
     @Override

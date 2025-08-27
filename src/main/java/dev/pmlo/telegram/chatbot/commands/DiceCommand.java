@@ -10,7 +10,7 @@ public class DiceCommand implements BotCommand {
 
     @Override
     public String getCommand() {
-        return "/dice";
+        return "dice";
     }
 
     @Override

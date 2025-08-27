@@ -14,7 +14,7 @@ public class FactCommand implements BotCommand {
 
     @Override
     public String getCommand() {
-        return "/fact";
+        return "fact";
     }
 
     @Override
@@ -32,7 +32,7 @@ public class FactCommand implements BotCommand {
 
             HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
             JSONObject json = new JSONObject(response.body());
-            String fact = json.optString("text", "No fact found!");
+            String fact = json.optString("text", "Faktaa ei löytynyt!");
 
             return SendMessage.builder()
                     .chatId(message.getChatId().toString())

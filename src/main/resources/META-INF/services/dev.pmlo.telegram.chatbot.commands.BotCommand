@@ -9,3 +9,4 @@ dev.pmlo.telegram.chatbot.commands.FactCommand
 dev.pmlo.telegram.chatbot.commands.DiceCommand
 dev.pmlo.telegram.chatbot.commands.CoinCommand
 dev.pmlo.telegram.chatbot.commands.MovieCommand
+dev.pmlo.telegram.chatbot.commands.NewsCommand

@@ -22,7 +22,7 @@ public class InfoCommand implements BotCommand {
         MyBot.getCommands().values().stream()
                 .filter(cmd -> !cmd.getCommand().equals("/info"))
                 .forEach(cmd ->
-                sb.append("`").append(cmd.getCommand()).append("`")
+                sb.append("`/").append(cmd.getCommand()).append("`")
                         .append(" - ").append(cmd.getDescription())
                         .append("\n")
         );

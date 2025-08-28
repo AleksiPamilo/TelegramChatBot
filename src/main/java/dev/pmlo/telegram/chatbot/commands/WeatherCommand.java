@@ -22,7 +22,7 @@ public class WeatherCommand implements BotCommand {
 
     @Override
     public String getDescription() {
-        return "Hakee sään annetusta kaupungista, esim: /weather Helsinki";
+        return "Hakee sään annetusta kaupungista, esim: `/weather Helsinki`";
     }
 
     @Override
@@ -31,8 +31,10 @@ public class WeatherCommand implements BotCommand {
         String[] parts = text.split(" ", 2);
 
         if (parts.length < 2) {
-            return new SendMessage(message.getChatId().toString(),
-                    "Anna kaupungin nimi, esim: /weather Helsinki");
+            SendMessage sendMessage = new SendMessage(message.getChatId().toString(),
+                    "Anna kaupungin nimi, esim: `/weather Helsinki`");
+            sendMessage.setParseMode("Markdown");
+            return sendMessage;
         }
 
         String city = parts[1];
